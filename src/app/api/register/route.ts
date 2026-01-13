@@ -22,8 +22,7 @@ export async function POST(request: Request) {
         const pool = await connectDB();
         console.log("Pool alındı");
 
-        // Yeni kullanıcıyı ekle (CreatedDate ile birlikte, ID sıralı olması için)
-        // ID sütunu IDENTITY ise otomatik artacak ve en alta eklenecek
+
         const result = await pool
             .request()
             .input("email", sql.NVarChar(100), email)
