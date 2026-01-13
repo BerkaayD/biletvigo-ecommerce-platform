@@ -39,7 +39,6 @@ export default function Cities({ onSelect }: CityModalProps) {
         // Kapanma animasyonunu başlat
         setIsClosing(true);
 
-        // Animasyon süresiyle senkron kapatma (global.css'de 500ms)
         setTimeout(() => {
             onSelect(cityName);
         }, 500);
