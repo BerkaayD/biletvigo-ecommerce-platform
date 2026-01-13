@@ -133,8 +133,7 @@ export default function LoginPage() {
             </p>
           </div>
         </div>
-
-        {/* Sağ Taraf: Resim */}
+        
         <div className="hidden md:block w-1/2 relative">
           <Image 
             src="/eglence.jpg" 
