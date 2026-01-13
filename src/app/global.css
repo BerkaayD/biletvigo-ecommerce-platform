@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#animation-animatable-properties-svg-attributes .docs-demo-template {
+    display: none;
+}
+
+#animation-animatable-properties-svg-attributes .demo polygon {
+    filter: url(#displacementFilter)
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.83rem;
+}
+
+/* Cities modal'dan Navbar konum butonuna küçülerek gitme animasyonu */
+@keyframes cityModalToNavbar {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(180px, -260px) scale(0.15);
+        opacity: 0;
+    }
+}
+
+.city-modal-panel {
+    transform-origin: center;
+}
+
+.city-modal-closing {
+    animation: cityModalToNavbar 0.5s ease-in-out forwards;
+}
+
+@keyframes cityModalOverlayFade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.city-modal-overlay-closing {
+    animation: cityModalOverlayFade 0.5s ease-in-out forwards;
+}
